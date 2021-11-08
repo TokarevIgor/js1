@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Tokarev Igor">
+	<title>Tokarev Igor > Home Task 2</title>
+	<style>
+		body { font-family: Consolas, Courier, monospace; }
+	</style>
+</head>
+<body>
+    <h3>Задача №5</h3>
+	<h2>Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических
+        операций
+        (использовать функции из задания 4) и вернуть полученное значение:</h2>
+	<hr>
+	<p>
+		<script>
+			function taskNumber5() {
+
+				var a = +prompt('Введите значение переменной "a"'),
+					b = +prompt('Введите значение переменной "b"'),
+					operation = prompt('Введите необходимую операцию "+", "-", "*", "/"'),
+					result;
+
+				function operationAddition (a, b) {
+					return a+b;
+				}
+
+				function operationSubtraction(a, b) {
+					return a-b;
+				}
+
+				function operationMultiplication (a, b) {
+					return a*b;
+				}
+
+				function operationDivision (a, b) {
+					return a/b;
+				}
+
+				function mathOperation(a, b, operation) {
+					switch (operation) {
+						case("+"):
+							return operationAddition (a, b);
+						case("-"):
+							return operationSubtraction (a, b);
+						case("*"):
+							return operationMultiplication (a, b);
+						case("/"):
+							return operationDivision (a, b);
+						default:
+							return "Неправильно введена арифметическая операция!";
+					}
+				}
+
+				alert ('a = ' + a +
+						'\nb = ' + b +
+						'\nоперация: ' + operation +
+						'\nрезультат: ' + mathOperation(a, b, operation));
+			}
+		</script>
+	<p>
+		<a href="javascript:void(0);" onclick="taskNumber5();">Запустить выполнение задачи №5</a>
+	</p>
+	</p>
+	<hr>
+</body>
+</html> 

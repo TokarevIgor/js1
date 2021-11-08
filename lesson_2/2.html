@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Tokarev Igor">
+	<title>Tokarev Igor > Home Task 2</title>
+	<style>
+		body { font-family: Consolas, Courier, monospace; }
+	</style>
+</head>
+<body>
+    <h3>Задача №2</h3>
+	<h2>Чему будут равны переменные x и a в примере ниже? Написать почему так произошло
+        (описать последовательность действий).</h2>
+	<hr>
+	<p>
+		<br>var a = 2;
+		<br>var x = 1 + (a *= 2);
+		<br><i>Ответ: x будет =
+		<script>
+			var a = 2;
+			var x = 1 + (a *= 2);
+			document.write(x);
+		</script>
+		, сначала выполняется операция в скобках, т.к. приоритет выше и корректность записи, далее сумма, полная запись x = 1 + (a = a * 2 = 4) = 5.</i>
+        <br><i>Ответ: a будет =
+            <script>
+                var a = 2;
+                var x = 1 + (a *= 2);
+                document.write(a);
+            </script>
+            , a умножается на 2 то есть a = (2 * 2) = 4.</i>
+	</p>
+	<hr>
+</body>
+</html> 
