@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Tokarev Igor">
+	<title>Tokarev Igor > Home Task 2</title>
+	<style>
+		body { font-family: Consolas, Courier, monospace; }
+	</style>
+</head>
+<body>
+    <h3>Задача №4</h3>
+	<h2>Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+        параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+        Обязательно использовать оператор return:</h2>
+	<hr>
+	<p>
+		<script>
+			function taskNumberFive() {
+
+				var a = Math.floor(Math.random()*100),
+					b = Math.floor(Math.random()*100);
+
+				function operationAddition (a, b) {
+					return a+b;
+				}
+
+				function operationSubtraction(a, b) {
+					return a-b;
+				}
+
+				function operationMultiplication (a, b) {
+					return a*b;
+				}
+
+				function operationDivision (a, b) {
+					return a/b;
+				}
+
+				alert ('a (random) = ' + a +
+						'\nb (random) = ' + b +
+						'\na + b = ' + operationAddition(a, b) +
+						'\na - b = ' + operationSubtraction(a, b) +
+						'\na * b = ' + operationMultiplication(a, b) +
+						'\na / b = ' + operationDivision(a, b).toFixed(4));
+			}
+		</script>
+	<p>
+		<a href="javascript:void(0);" onclick="taskNumberFive();">Запустить выполнение задачи №4</a>
+	</p>
+	</p>
+	<hr>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Tokarev Igor">
+	<title>Tokarev Igor > Home Task 2</title>
+	<style>
+		body { font-family: Consolas, Courier, monospace; }
+	</style>
+</head>
+<body>
+    <h3>Задача №3</h3>
+	<h2>Объявить две переменные a и b и задать им целочисленные произвольные начальные значения.
+        Затем написать скрипт, который работает по следующему принципу:</h2>
+        <li>если a и b положительные, вывести их разность(ноль можно считать положительным числом.);</li>
+        <li>если а и b отрицательные, вывести их произведение;</li>
+        <li>*если а и b разных знаков, вывести их сумму;</li>
+	<hr>
+	<p>
+		<script>
+			function taskNumberThree() {
+				var a = +prompt('Введите значение целочисленной переменной "a"'),
+					b = +prompt('Введите значение целочисленной переменной "b"'),
+					c,
+					d;
+				if (a>0 & b>0) {
+					c = a - b;
+					d = 'a - b';
+				} else if (a<0 & b<0) {
+					c = a * b;
+					d = 'a * b';
+				} else {
+					c = a + b;
+					d = 'a + b';
+				}
+				alert('a = ' + a + '; b = ' + b + '; '+ d + ' = ' + c);
+			}
+		</script>
+
+		<a href="javascript:void(0);" onclick="taskNumberThree();">Запустить выполнение задачи №3</a>
+	</p>
+	<hr>
+</body>
+</html> 
