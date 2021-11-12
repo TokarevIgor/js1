@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Tokarev Igor">
+	<title>Tokarev Igor > Home Task 1.1</title>
+	<style>
+		body { font-family: Consolas, Courier, monospace; }
+	</style>
+</head>
+<body>
+    <h3>Задача №1.1</h3>
+	<h2>Сделайте в стиле es5, а затем в стиле es6
+        конструктор Product, который принимает параметры name и price, сохраните их как
+        свойства объекта. Также объекты типа Product должны иметь метод make25PercentDiscount,
+        который будет уменьшать цену в объекте на 25%. Имейте в виду, что метод make25PercentDiscount
+        не должен быть внутри функции-конструктора, и также не нужно создавать отдельный объект-прототип
+    </h2>
+	<hr>
+	<script>
+        "use strict";
+
+        //Если я верно понял задание нужно было сделать отдельную функцию для изменения
+               
+        function make25PercentDiscount(){
+            this.price = this.price - this.price * 0.25
+        }
+
+         /*ES5*/
+        function ProductES5(name, price){
+            this.name = name;
+            this.price = price;
+        }
+
+        let productES5_1 = new ProductES5('Клавиатура','100');
+        console.log(productES5_1);
+        make25PercentDiscount.call(productES5_1);
+        console.log(productES5_1);
+
+         /*ES6*/
+        class ProductES6{
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        let productES6_1 = new ProductES6('Мышка','1000');
+        console.log(productES6_1);
+        make25PercentDiscount.call(productES6_1);
+        console.log(productES6_1);
+
+    </script>
+	<hr>
+</body>
+</html> 
